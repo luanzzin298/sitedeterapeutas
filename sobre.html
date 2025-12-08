@@ -20,11 +20,14 @@
         background: #eaf4fb;
         color: #2e3a47;
       }
+
+      /* NAVBAR */
       .navbar {
         background: white;
         border-bottom: 2px solid #c9a63a;
         padding: 15px 0;
       }
+
       .navbar-brand img {
         height: 59px;
       }
@@ -38,10 +41,12 @@
         border-radius: 10px;
         height: 34px;
       }
+
       .search-box i {
         font-size: 16px;
         color: #c9a63a;
       }
+
       .search-box input {
         border: none;
         outline: none;
@@ -53,19 +58,20 @@
         font-weight: 600;
         color: #2e3a47 !important;
       }
+
       .nav-link.active {
         color: #c9a63a !important;
-      } /* ⬅ aba dourada ativa */
+      }
 
-   h2 {
-  text-align: center;
-  font-weight: 800;
-  color: #2e3a47;
-  font-size: 2.4rem; /* mesmo tamanho do "Fale Conosco" */
-  margin-top: 30px;  /* desce um pouco, como na outra página */
-  margin-bottom: 35px;
-}
-
+      /* TÍTULO */
+      h2 {
+        text-align: center;
+        font-weight: 800;
+        color: #2e3a47;
+        font-size: 2.4rem;
+        margin-top: 30px;
+        margin-bottom: 35px;
+      }
 
       /* FOTO DA TERAPEUTA */
       .foto-terapeuta img {
@@ -78,20 +84,42 @@
       }
 
       /* TEXTO DE DESCRIÇÃO */
-      .sobre-container p {
+      .sobre-container {
         text-align: justify;
         max-width: 900px;
         margin: 20px auto 0 auto;
+        padding: 0 20px; /* padding lateral para celulares */
         line-height: 1.8;
         font-size: 18px;
       }
 
+      /* FOOTER */
       footer {
         margin-top: 40px;
         background: white;
         padding: 20px 0;
         text-align: center;
         border-top: 2px solid #c9a63a;
+      }
+
+      /* RESPONSIVO */
+      @media (max-width: 576px) {
+        .sobre-container {
+          padding: 0 15px; /* menos padding nas telas pequenas */
+          font-size: 16px;
+          line-height: 1.6;
+        }
+
+        .foto-terapeuta img {
+          width: 150px;
+          height: 150px;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+          margin-top: 25px;
+          margin-bottom: 25px;
+        }
       }
     </style>
   </head>
@@ -148,36 +176,37 @@
           <img src="img/ftTera.jpg" alt="Foto da Terapeuta" />
         </div>
 
-       <p class="lead"><b>
-  Sou Noêmia Maia, Terapeuta Integrativa, e trago na minha jornada uma
-  vocação que me acompanha desde sempre: o cuidado. Desde muito jovem,
-  descobri que meu propósito era acolher pessoas, aliviar dores, ouvir
-  histórias e ajudar cada ser humano a reencontrar o próprio equilíbrio.
-  Profissionalmente, atuo há cerca de sete anos, unindo sensibilidade,
-  técnica e presença em cada atendimento. Sou formada em Enfermagem, o
-  que me oferece uma base sólida para compreender o corpo com segurança
-  e responsabilidade. Também sou Bacharel em Filosofia, formação que
-  aprofunda meu olhar sobre o ser humano, suas escolhas, seus sentidos e
-  suas travessias — ampliando a compreensão do emocional e do espiritual
-  com consciência e profundidade. Na área integrativa, especializei-me
-  em Aromaterapia, Cromoterapia, Homeopatia, Biodigital, Fitoterapia,
-  Radiestesia e Leis Biológicas, ferramentas que utilizo de forma
-  complementar e personalizada, respeitando a individualidade de cada
-  pessoa. Acredito que saúde verdadeira nasce quando o físico, o
-  emocional e o espiritual caminham juntos. Por isso, meus atendimentos
-  integram ciência, energia e consciência — três pilares que sustentam
-  meu trabalho e meu compromisso com cada paciente. Atendo online e
-  presencial, ampliando o alcance do cuidado e permitindo que cada
-  pessoa receba o que precisa no seu tempo e no seu espaço. Aqui, você
-  encontra acolhimento, escuta e direção. Encontra um lugar onde sua
-  energia se alinha, seu corpo se fortalece e sua alma encontra
-  descanso. Este é o seu espaço de reconexão.
-</b></p>
-
+        <p class="lead"><b>
+          Sou Noêmia Maia, Terapeuta Integrativa, e trago na minha jornada uma
+          vocação que me acompanha desde sempre: o cuidado. Desde muito jovem,
+          descobri que meu propósito era acolher pessoas, aliviar dores, ouvir
+          histórias e ajudar cada ser humano a reencontrar o próprio equilíbrio.
+          Profissionalmente, atuo há cerca de sete anos, unindo sensibilidade,
+          técnica e presença em cada atendimento. Sou formada em Enfermagem, o
+          que me oferece uma base sólida para compreender o corpo com segurança
+          e responsabilidade. Também sou Bacharel em Filosofia, formação que
+          aprofunda meu olhar sobre o ser humano, suas escolhas, seus sentidos e
+          suas travessias — ampliando a compreensão do emocional e do espiritual
+          com consciência e profundidade. Na área integrativa, especializei-me
+          em Aromaterapia, Cromoterapia, Homeopatia, Biodigital, Fitoterapia,
+          Radiestesia e Leis Biológicas, ferramentas que utilizo de forma
+          complementar e personalizada, respeitando a individualidade de cada
+          pessoa. Acredito que saúde verdadeira nasce quando o físico, o
+          emocional e o espiritual caminham juntos. Por isso, meus atendimentos
+          integram ciência, energia e consciência — três pilares que sustentam
+          meu trabalho e meu compromisso com cada paciente. Atendo online e
+          presencial, ampliando o alcance do cuidado e permitindo que cada
+          pessoa receba o que precisa no seu tempo e no seu espaço. Aqui, você
+          encontra acolhimento, escuta e direção. Encontra um lugar onde sua
+          energia se alinha, seu corpo se fortalece e sua alma encontra
+          descanso. Este é o seu espaço de reconexão.
+        </b></p>
       </div>
     </section>
 
-
+    <footer>
+      <p>© Clínica Terapêutica — Todos os Direitos Reservados</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
