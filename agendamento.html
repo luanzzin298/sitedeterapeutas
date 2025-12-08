@@ -87,14 +87,14 @@ section p strong {
     color: #c9a63a;
 }
 
-/* BOTÕES MENOR TAMANHO */
+/* BOTÕES DE AGENDAMENTO */
 .btn-forms {
     background: #c9a63a;
     color: white;
-    padding: 10px 0;       /* diminuiu o padding vertical */
-    width: 220px;          /* diminuiu a largura */
+    padding: 12px 0;       
+    width: 220px;          
     border-radius: 10px;
-    font-size: 18px;       /* ligeiramente menor */
+    font-size: 18px;       
     border: none;
     margin: 10px 0;
     transition: 0.3s;
@@ -107,13 +107,47 @@ section p strong {
     color: white;
 }
 
-/* ===================== FOOTER ===================== */
+/* CARD DO FORMULÁRIO */
+.agendamento-card {
+    background: white;
+    border: 2px solid #c9a63a;
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* FOOTER */
 footer {
     background: white;
     padding: 20px 0;
     text-align: center;
     border-top: 2px solid #c9a63a;
     margin-top: auto;
+}
+
+/* RESPONSIVO */
+@media (max-width: 576px) {
+    section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    section p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .btn-forms {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    .agendamento-card {
+        padding: 20px 15px;
+    }
 }
 </style>
 </head>
@@ -149,7 +183,7 @@ footer {
 </nav>
 
 <!-- CONTEÚDO -->
-<section id="agendamento" style="padding-top: 40px; padding-bottom: 160px;">
+<section id="agendamento">
   <h2>Agende Sua Sessão</h2>
 
   <p>
@@ -165,24 +199,19 @@ footer {
     Clique nos botões abaixo para acessar o formulário de agendamento e confirmar o pagamento da sua sessão, dando o próximo passo rumo ao seu <strong>equilíbrio e saúde duradouros</strong>.
   </p>
 
-  <div class="container" style="max-width: 500px; margin: 0 auto;">
-    <div style="background: white; border: 2px solid #c9a63a; border-radius: 14px; padding: 30px; text-align: center;">
+  <div class="agendamento-card">
       <a href="https://forms.gle/xYfMpMKzx44Mkxfr9" target="_blank" class="btn btn-forms">
         Preencher Formulário de Agendamento
       </a>
-
       <a href="https://pag.ae/81hzZbnVq" target="_blank" class="btn btn-forms">
         Confirmar Pagamento da Sessão
       </a>
-    </div>
   </div>
 </section>
 
-
-
-
-<!-- FOOTER -->
-
+<footer>
+  <p>© Clínica Terapêutica — Todos os Direitos Reservados</p>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
