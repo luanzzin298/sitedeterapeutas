@@ -1,117 +1,170 @@
-/* Reset básico */
-* {
+/* ======================= BASE ======================= */
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  background: #eaf4fb;
+  color: #2e3a47;
 }
 
-/* Layout geral */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+.navbar {
+  background: white;
+  border-bottom: 2px solid #c9a63a;
+  padding: 15px 0;
 }
 
-/* Imagens responsivas */
-img {
-  max-width: 100%;
-  height: auto;
+.navbar-brand img {
+  height: 59px;
 }
 
-/* Containers */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
+.nav-link {
+  color: #2e3a47 !important;
+  font-weight: 600;
 }
 
-/* Menus */
-nav ul {
+.nav-link.active {
+  color: #c9a63a !important;
+}
+
+.search-box {
   display: flex;
-  gap: 20px;
-  list-style: none;
+  align-items: center;
+  gap: 6px;
+  border: 2px solid #c9a63a;
+  padding: 3px 9px;
+  border-radius: 10px;
+  height: 34px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
+.search-box i {
+  font-size: 16px;
+  color: #c9a63a;
 }
 
-/* GRID para seções múltiplas */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-/* Colunas responsivas  */
-.column-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.column-3 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
-
-.column-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-/* BOTÕES */
-button, .btn {
-  cursor: pointer;
-  padding: 10px 20px;
+.search-box input {
   border: none;
-  font-weight: bold;
+  outline: none;
+  background: none;
+  font-size: 14px;
 }
 
-/* FORMULÁRIOS  */
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
+/* ======================= HERO ======================= */
+.hero {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* ===================== */
-/* 📱 RESPONSIVIDADE     */
-/* ===================== */
+.hero h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2e3a47;
+}
 
-/* Tablets e celulares grandes */
+.gold {
+  color: #c9a63a; /* dourado */
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.btn-cta {
+  margin-top: 20px;
+  padding: 14px 32px;
+  background: #c9a63a;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  background: #b59433;
+  color: white;
+  text-decoration: none;
+}
+
+/* ======================= FOOTER ======================= */
+footer {
+  background: white;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 2px solid #c9a63a;
+}
+
+/* ======================= RESPONSIVO ======================= */
 @media (max-width: 992px) {
-  .grid {
-    grid-template-columns: 1fr 1fr;
+  .hero h2 {
+    font-size: 2.2rem;
   }
-  .column-3, .column-4 {
-    grid-template-columns: 1fr 1fr;
+  .hero p {
+    font-size: 1.15rem;
   }
-  nav ul {
-    gap: 10px;
+  .btn-cta {
+    padding: 13px 28px;
+    font-size: 1.1rem;
   }
 }
 
-/* Celulares comuns */
 @media (max-width: 768px) {
-  .grid, .column-2, .column-3, .column-4 {
-    grid-template-columns: 1fr;
+  .hero h2 {
+    font-size: 2rem;
   }
-
-  nav ul {
-    flex-direction: column;
-    gap: 5px;
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .btn-cta {
+    padding: 12px 26px;
+    font-size: 1.05rem;
   }
 }
 
-/* Celulares muito pequenos */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
+@media (max-width: 576px) {
+  .hero h2 {
+    font-size: 1.8rem;
   }
-  
-  nav ul {
-    font-size: 16px;
+  .hero p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .btn-cta {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    width: 90%; /* botão ocupa quase toda a tela */
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Ajuste extra para telas muito pequenas */
+@media (max-width: 375px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .btn-cta {
+    padding: 12px 24px;
+    font-size: 1rem;
   }
 }
