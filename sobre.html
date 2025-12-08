@@ -19,6 +19,8 @@
         font-family: "Segoe UI", sans-serif;
         background: #eaf4fb;
         color: #2e3a47;
+        margin: 0;
+        padding: 0;
       }
 
       /* NAVBAR */
@@ -85,12 +87,16 @@
 
       /* TEXTO DE DESCRIÇÃO */
       .sobre-container {
-        text-align: justify;
         max-width: 900px;
         margin: 20px auto 0 auto;
-        padding: 0 20px; /* padding lateral para celulares */
+        padding: 0 20px; /* padding lateral para celular */
         line-height: 1.8;
         font-size: 18px;
+        text-align: justify;
+      }
+
+      .sobre-container p.lead b {
+        font-weight: 500;
       }
 
       /* FOOTER */
@@ -104,10 +110,10 @@
 
       /* RESPONSIVO */
       @media (max-width: 576px) {
-        .sobre-container {
-          padding: 0 15px; /* menos padding nas telas pequenas */
-          font-size: 16px;
-          line-height: 1.6;
+        h2 {
+          font-size: 1.8rem;
+          margin-top: 25px;
+          margin-bottom: 25px;
         }
 
         .foto-terapeuta img {
@@ -115,10 +121,10 @@
           height: 150px;
         }
 
-        h2 {
-          font-size: 1.8rem;
-          margin-top: 25px;
-          margin-bottom: 25px;
+        .sobre-container {
+          padding: 0 15px;
+          font-size: 16px;
+          line-height: 1.6;
         }
       }
     </style>
@@ -176,7 +182,7 @@
           <img src="img/ftTera.jpg" alt="Foto da Terapeuta" />
         </div>
 
-        <p class="lead"><b>
+        <p class="lead">
           Sou Noêmia Maia, Terapeuta Integrativa, e trago na minha jornada uma
           vocação que me acompanha desde sempre: o cuidado. Desde muito jovem,
           descobri que meu propósito era acolher pessoas, aliviar dores, ouvir
@@ -200,17 +206,13 @@
           encontra acolhimento, escuta e direção. Encontra um lugar onde sua
           energia se alinha, seu corpo se fortalece e sua alma encontra
           descanso. Este é o seu espaço de reconexão.
-        </b></p>
+        </p>
       </div>
     </section>
 
-    <footer>
-      <p>© Clínica Terapêutica — Todos os Direitos Reservados</p>
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- SCRIPT QUE DEIXA A ABA ATIVA DOURADA AUTOMATICAMENTE -->
     <script>
       const links = document.querySelectorAll(".nav-link");
       const current = window.location.pathname.split("/").pop();
