@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #eaf4fb;
+        color: #2e3a47;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background: white;
+        border-bottom: 2px solid #c9a63a;
+        padding: 15px 0;
+      }
+      .navbar-brand img {
+        height: 59px;
+      }
+      .search-box {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        border: 2px solid #c9a63a;
+        padding: 3px 9px;
+        border-radius: 10px;
+        height: 34px;
+      }
+      .search-box i {
+        font-size: 16px;
+        color: #c9a63a;
+      }
+      .search-box input {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 14px;
+      }
+      .nav-link {
+        font-weight: 600;
+        color: #2e3a47 !important;
+      }
+      .nav-link.active {
+        color: #c9a63a !important;
+      }
+
+      /* SEÇÃO CONTATO ESTILO AGENDAMENTO */
+      section {
+        min-height: calc(100vh - 160px); /* navbar + footer */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px 20px 40px 20px;
+        text-align: center;
+      }
+
+      section h2 {
+        font-size: 2.4rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+        color: #2e3a47;
+      }
+
+      section p {
+        font-size: 1.25rem;
+        line-height: 2;
+        max-width: 850px;
+        margin: 0 auto 30px auto;
+        color: #2e3a47;
+        text-align: justify;
+      }
+
+      section p strong {
+        color: #c9a63a;
+      }
+
+      .contato-box {
+        background: white;
+        padding: 30px;
+        border-radius: 14px;
+        text-align: center;
+        border: 2px solid #c9a63a;
+        max-width: 700px;
+      }
+
+      .contato-box p {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+      }
+
+      .btn-whats {
+        background: #c9a63a;
+        color: white;
+        padding: 10px 0;
+        width: 220px;
+        border-radius: 10px;
+        font-size: 18px;
+        border: none;
+        transition: 0.3s;
+        margin: 10px 0;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+      }
+      .btn-whats:hover {
+        background: #b39031;
+        color: white;
+      }
+
+      /* FOOTER */
+      footer {
+        background: white;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 2px solid #c9a63a;
+        margin-top: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logoN.jpg" alt="Logo" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li>
+          </ul>
+
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Pesquisar..." />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato">
+      <h2>Fale Conosco</h2>
+
+      <p>
+        Estamos aqui para <strong>acolher você</strong> e oferecer o suporte que precisa.
+        Entre em contato pelo <strong>WhatsApp</strong> para esclarecer todas suas dúvidas.
+      </p>
+
+      <p>
+        Será um enorme prazer acompanhar você nesta jornada de <strong>bem-estar e equilíbrio</strong>.
+      </p>
+<div class="contato-box">
+  <p>Entre em contato pelo <strong>WhatsApp 1</strong></p>
+  <a href="https://wa.me/553299626868" target="_blank" class="btn btn-whats">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+
+  <p style="text-align: center; font-size: 20px; font-weight: 600; margin: 28px 0;">ou</p>
+
+
+  <p style="text-align: center;">pelo <strong>WhatsApp 2</strong></p>
+  <a href="https://wa.me/555199592177" target="_blank" class="btn btn-whats">
+    <i class="bi bi-whatsapp"></i> WhatsApp
+  </a>
+</div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© Clínica Terapêutica — Todos os Direitos Reservados</p>
+    </footer>
+
+    <script>
+      const links = document.querySelectorAll(".nav-link");
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Início</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+   <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #eaf4fb;
+    color: #2e3a47;
+  }
+
+  .navbar {
+    background: white;
+    border-bottom: 2px solid #c9a63a;
+    padding: 15px 0;
+  }
+
+  .navbar-brand img {
+    height: 59px;
+  }
+
+  .nav-link {
+    color: #2e3a47 !important;
+    font-weight: 600;
+  }
+
+  .nav-link.active {
+    color: #c9a63a !important;
+  }
+
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 2px solid #c9a63a;
+    padding: 3px 9px;
+    border-radius: 10px;
+    height: 34px;
+  }
+
+  .search-box i {
+    font-size: 16px;
+    color: #c9a63a;
+  }
+
+  .search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 14px;
+  }
+
+  /* HERO OCUPANDO A TELA TODA */
+  /* HERO AJUSTADA */
+.hero {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.4rem;  /* agora igual aos outros títulos */
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2e3a47;
+}
+.gold {
+  color: #c9a63a; /* dourado */
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;     /* Aumentado */
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 2;
+}
+
+
+.btn-cta {
+  margin-top: 20px;
+  padding: 14px 32px; /* aumentei o padding vertical e horizontal */
+  background: #c9a63a;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.15rem; /* leve aumento da fonte */
+}
+
+  .btn-cta:hover {
+    background: #b59433;
+    color: white;
+    text-decoration: none;
+  }
+
+  footer {
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #c9a63a;
+  }
+</style>
+
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logoN.jpg" alt="Logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="nav">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipe.html">Equipe</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agendamento.html">Agendamento</a>
+            </li>
+          </ul>
+
+          <div class="search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Pesquisar..." />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+<!-- HERO -->
+<section class="hero">
+  <h2>
+    Integrando ciência, energia e  acolhimento para transformar vidas
+  </h2>
+  <p>
+    Bem-vindo(a) ao espaço onde a <strong class="gold">transformação</strong> acontece por meio da união
+    entre <strong class="gold">ciência</strong>, <strong class="gold">energia</strong> e <strong class="gold">acolhimento</strong>. Aqui, o atendimento é pensado para
+    oferecer um cuidado integrativo, respeitando profundamente a sua
+    história e seu tempo, com leveza e sensibilidade. A abordagem vai além
+    da simples aplicação de técnicas — ela busca compreender o ser humano em
+    sua totalidade, promovendo <strong class="gold">equilíbrio físico, emocional e energético</strong>.
+    Com uma combinação de métodos como tarô, terapia integrativa, massagem,
+    homeopatia, constelação familiar, reiki, hipnoterapia e programação neurolinguística. Cada atendimento é
+    cuidadosamente planejado e personalizado, proporcionando uma jornada
+    completa de <strong class="gold">autoconhecimento, bem-estar</strong> e fortalecimento da <strong class="gold">energia pessoal</strong>. Cada sessão é um momento único de escuta, cuidado e atenção,
+    onde ciência e energia trabalham juntas para promover saúde, harmonia e
+    <strong class="gold">equilíbrio duradouros</strong>.
+  </p>
+  <a href="agendamento.html" class="btn btn-cta">Agendar Sessão</a>
+</section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© Clínica Terapêutica — Todos os Direitos Reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- SCRIPT PARA ABA ATIVA -->
+    <script>
+      const links = document.querySelectorAll(".nav-link");
+      const current = window.location.pathname.split("/").pop();
+
+      links.forEach((link) => {
+        if (link.getAttribute("href") === current) {
+          link.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

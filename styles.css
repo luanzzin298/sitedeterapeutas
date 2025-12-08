@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout geral */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Menus */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* GRID para seções múltiplas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Colunas responsivas  */
+.column-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.column-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.column-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* BOTÕES */
+button, .btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+}
+
+/* FORMULÁRIOS  */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+}
+
+/* ===================== */
+/* 📱 RESPONSIVIDADE     */
+/* ===================== */
+
+/* Tablets e celulares grandes */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .column-3, .column-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+  nav ul {
+    gap: 10px;
+  }
+}
+
+/* Celulares comuns */
+@media (max-width: 768px) {
+  .grid, .column-2, .column-3, .column-4 {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  nav ul {
+    font-size: 16px;
+  }
+}
