@@ -1,11 +1,9 @@
 /* ======================= BASE ======================= */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
   font-family: "Segoe UI", sans-serif;
   background: #eaf4fb;
   color: #2e3a47;
+  margin: 0;
 }
 
 .navbar {
@@ -51,56 +49,78 @@ html, body {
 
 /* ======================= HERO ======================= */
 .hero {
-  min-height: calc(100vh - 120px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
   text-align: center;
+  background: #eaf4fb;
 }
 
 .hero h2 {
+  text-align: center;
   font-size: 2.4rem;
   font-weight: 800;
-  text-align: center;
-  margin-bottom: 25px;
   color: #2e3a47;
+  margin-bottom: 30px;
 }
 
-.gold {
-  color: #c9a63a; /* dourado */
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  text-align: justify;
-  max-width: 900px;
-  margin: 0 auto;
-  line-height: 2;
-}
-
-.btn-cta {
-  margin-top: 20px;
-  padding: 14px 32px;
-  background: #c9a63a;
-  color: white;
-  border-radius: 8px;
-  font-size: 1.15rem;
-  font-weight: 600;
+/* ======================= CARDS ======================= */
+.team-card {
+  background: white;
+  border: 2px solid #c9a63a;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.btn-cta:hover {
-  background: #b59433;
-  color: white;
-  text-decoration: none;
+.team-card img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #c9a63a;
+  align-self: center;
+}
+
+.team-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.team-card p {
+  font-size: 1.05rem;
+  text-align: justify;
+  line-height: 1.35;
+  margin-bottom: 20px;
+  flex: 1;
+  letter-spacing: -0.3px;
+  word-spacing: -1px;
+}
+
+.social-icons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 22px;
+  color: #c9a63a;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #8b6e22;
 }
 
 /* ======================= FOOTER ======================= */
 footer {
+  margin-top: 40px;
   background: white;
   padding: 20px 0;
   text-align: center;
@@ -112,45 +132,73 @@ footer {
   .hero h2 {
     font-size: 2.2rem;
   }
-  .hero p {
-    font-size: 1.15rem;
+
+  .team-card img {
+    width: 150px;
+    height: 150px;
   }
-  .btn-cta {
-    padding: 13px 28px;
+
+  .team-card h4 {
     font-size: 1.1rem;
+  }
+
+  .team-card p {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
   .hero h2 {
     font-size: 2rem;
   }
-  .hero p {
-    font-size: 1.1rem;
+
+  .team-card img {
+    width: 130px;
+    height: 130px;
   }
-  .btn-cta {
-    padding: 12px 26px;
-    font-size: 1.05rem;
+
+  .team-card h4 {
+    font-size: 1rem;
+  }
+
+  .team-card p {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 576px) {
+  .hero {
+    padding: 35px 10px;
+  }
+
   .hero h2 {
     font-size: 1.8rem;
   }
-  .hero p {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-  .btn-cta {
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    width: 90%; /* botão ocupa quase toda a tela */
+
+  .team-card img {
+    width: 120px;
+    height: 120px;
   }
 
-  .search-box {
-    width: 100%;
-    max-width: 200px;
+  .team-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+  }
+
+  .team-card {
+    padding: 15px;
   }
 }
 
@@ -159,12 +207,18 @@ footer {
   .hero h2 {
     font-size: 1.6rem;
   }
-  .hero p {
-    font-size: 0.95rem;
-    line-height: 1.7;
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
   }
-  .btn-cta {
-    padding: 12px 24px;
-    font-size: 1rem;
+
+  .team-card h4 {
+    font-size: 0.9rem;
+  }
+
+  .team-card p {
+    font-size: 0.85rem;
+    line-height: 1.35;
   }
 }
